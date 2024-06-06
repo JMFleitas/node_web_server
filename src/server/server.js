@@ -1,11 +1,12 @@
-const express = require('express');
-const path = require('path')
+import express from 'express'
+import path from 'path'
 
-const startServer = (options) => {
+export const startServer = (options) => {
     const { port, public_path = 'public' } = options
     // console.log(port, public_path)
 
     const app = express()
+
     //Para poder usar midlewares se usa la palabra 'use'(express)
     app.use(express.static(public_path)) // contenido estatico que ponemos disponible
 
@@ -19,7 +20,4 @@ const startServer = (options) => {
         console.log(`Escuchando el puerto: ${port}`)
     })
 
-}
-module.exports = {
-    startServer
 }

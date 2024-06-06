@@ -1,5 +1,5 @@
-const { envs } = require('./config/env')
-const { startServer } = require('./server/server')
+import { envs } from './config/env.js'
+import { startServer } from './server/server.js'
 
 //Función  agnóstica autoconvocada
 //Agnóstica por que no tiene nombre
